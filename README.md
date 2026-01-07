@@ -213,7 +213,7 @@ Follow the steps below to set up and run the NCERT Hybrid RAG system locally.
 1️⃣ Clone the Repository
 
 
-                    git clone https://github.com/<your-username>/<your-repo-name>.git
+                    git clone https://github.com/SujalKamate/Intel-Unnati-Industrial-Training-2025--Slot-3.git
                     cd <your-repo-name>
 
 2️⃣ Initialize Python Environment (Python 3.13.5)
