@@ -16,6 +16,24 @@ This project was developed as part of the Intel® Unnati Industrial Training Pro
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ea0339fd-6b0a-4c42-b04b-c5ecc8f08ccf" />
 
 
+RAG Pipeline – Phase‑wise Breakdown (Table)
+
+
+| Phase                   | Component         | Tools / Models Used              | What Happens                                                       |
+| ----------------------- | ----------------- | -------------------------------- | ------------------------------------------------------------------ |
+| **1. Data Ingestion**   | Document Loading  | DirectoryLoader, PyPDFLoader     | NCERT PDFs (Class 5–10) are loaded from structured directories     |
+|                         | Text Cleaning     | OPEA Architecture                | Noise removal, normalization, NCERT‑aligned preprocessing          |
+|                         | Text Chunking     | RecursiveCharacterTextSplitter   | Chunks of **450 chars** with **90 overlap** for context continuity |
+| **2. Embedding Phase**  | Embedding Model   | `intfloat/multilingual-e5-large` | Multilingual semantic embeddings (1024‑dim vectors)                |
+|                         | Vector Storage    | ChromaDB                         | Persistent storage with metadata (grade, language, source)         |
+| **3. Retrieval Phase**  | Dense Retrieval   | Chroma Similarity Search         | Semantic matching of relevant chunks                               |
+|                         | Sparse Retrieval  | TF‑IDF                           | Keyword‑based lexical matching                                     |
+|                         | Hybrid Retrieval  | Dense + Sparse (α‑weighted)      | Combines semantic + keyword relevance                              |
+|                         | Re‑Ranking        | MMR (Maximal Marginal Relevance) | Removes redundancy, ensures diverse context                        |
+| **4. Generation Phase** | Query Expansion   | Mistral (via Ollama)             | Generates NCERT‑style reformulated queries                         |
+|                         | Answer Generation | Mistral (Grounded Prompt)        | Generates answers strictly from retrieved NCERT context            |
+| **5. Frontend**         | User Interface    | Streamlit                        | Text, OCR, Voice input + Answer, Summary, Sources output           |
+
 
 📋TL;DR (Short Overview)
 
