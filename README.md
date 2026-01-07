@@ -5,7 +5,6 @@ A curriculum‑aligned, multimodal NCERT question‑answering system built using
 
 
 
-
 📋TL;DR (Short Overview)
 
 
