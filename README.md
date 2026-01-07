@@ -352,7 +352,7 @@ The following resources are provided via Google Drive:
 - 🎤 Sample voice input files (for testing)
 
 👉 **Download from Google Drive:**  
-🔗 https://drive.google.com/drive/folders/1LsEtZPXwRtxqNKCctFVpgmYm7N-Uk1Y
+https://drive.google.com/drive/folders/1L5sEtZPXwRtxqNKCctFVpgmYm7N-Uk1Y?usp=sharing
 
 ---
 
